@@ -1,0 +1,45 @@
+@mixin cajas ($bgcaja){
+    background-color: $bgcaja;
+    border-radius: 5px;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border: 4px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    h2{
+        color: $color-oscuro;
+    }
+    p{
+        color: $color-oscuro;
+    }
+}
+
+.productos{
+    @include cajas ($grid-main);
+    cursor: pointer;
+    &:hover{
+        transform: scale(0.95);
+        background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+        color: var(--color-wsmoke);
+    }
+}
+
+.servicios{
+    @include cajas ($grid-nav);
+    cursor: pointer;
+    &:hover{
+        transform: scale(0.95);
+        background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+        color: $color-blanco;
+    }
+}
+
+.extras{
+    @include cajas ($grid-side);
+    cursor: pointer;
+    &:hover{
+        transform: scale(0.95);
+        background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+        color: $color-blanco;
+    }
+}
